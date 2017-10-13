@@ -1,0 +1,21 @@
+/* Show it is fixed to the top */
+body {
+  padding-top: 4.5rem;
+}
+
+footer {
+    padding-top: 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link, .navbar-dark  .navbar-nav .nav-link:hover, .nav-link, .nav-link:hover, .nav-item span {
+    display: inline-block;
+    color: #fff;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.search-gyms {
+    background: #F0F8FF;
+    padding: 3.5rem;
+}
