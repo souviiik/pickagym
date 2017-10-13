@@ -67,6 +67,8 @@ class SearchGyms extends Component {
 function validate(values){
     const errors = {};
 
+    console.log(values);
+
     if(!values.zipcode) {
         errors.zipcode = "Enter a zipcode!";
     }
