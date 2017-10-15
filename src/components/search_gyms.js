@@ -6,8 +6,8 @@ import { searchGym } from '../actions';
 
 class SearchGyms extends Component {
     onSubmit(values){        
-        this.props.searchGym(values, () => {
-            this.props.history.push('/gym-index');
+        this.props.searchGym(values, (zipcode) => {
+            this.props.history.push(`/gym-index/${zipcode}`);
         });
     }
 

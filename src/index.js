@@ -29,7 +29,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/customer-login" component={CustomerLogin}/>
           <Route path="/gym-owner-login" component={GymOwnerLogin}/>
-          <Route path="/gym-index" component={GymIndex}/>
+          <Route path="/gym-index/:zipcode" component={GymIndex}/>
 
 
           <Route path="/terms-and-conditions" component={TermsCondition}/>

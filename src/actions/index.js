@@ -2,8 +2,9 @@ import axios from 'axios';
 export const SEARCH_GYM = 'search_gym';
 
 export function searchGym(value, callback) {
-    /*
+    
     const {zipcode} = value;
+    /*
     const API_KEY = 'AIzaSyBVGJ-SsExoPPm0MzsyW0wHgn09EJftGCE';
     const ROOT_URL_1 = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=';
     const ROOT_URL_2 = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?';
@@ -18,7 +19,7 @@ export function searchGym(value, callback) {
     });
     */
 
-   callback();
+   callback(zipcode);
 
     return {
         type: SEARCH_GYM,
