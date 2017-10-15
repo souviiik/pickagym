@@ -9,13 +9,11 @@ export function searchGym(value) {
 
     const PLACE_DETAILS = axios.get(`${ROOT_URL_1}${zipcode}&key=${API_KEY}`)
     .then(() => {
-        const { lat } = PLACE_DETAILS.results[0].geometry.location;
-        const { lng } = PLACE_DETAILS.results[0].geometry.location;
+        const { lat, lng } = PLACE_DETAILS.results[0].geometry.location;
+        // const { lng } = PLACE_DETAILS.results[0].geometry.location;
         const ONE_MILE = 1609.34;
 
-        const request = axios.get(axios.get(`${ROOT_URL_2}location=${lat},${lng}gym&radius=${ONE_MILE*5}&key=${API_KEY}`));        
-
-        
+        const request = axios.get(axios.get(`${ROOT_URL_2}location=${lat},${lng}&type=gym&radius=${ONE_MILE*5}&key=${API_KEY}`));         
     });
 
     return {
