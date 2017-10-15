@@ -5,6 +5,8 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 
+import reducers from './reducers';
+
 import Header from './components/common/header';
 import Footer from './components/common/footer';
 import TermsCondition from './components/common/tnc';
@@ -15,8 +17,7 @@ import AboutUs from './components/common/about';
 import SearchGyms from './components/search_gyms';
 import CustomerLogin from './components/customer_login';
 import GymOwnerLogin from './components/gym_owner_login';
-
-import reducers from './reducers';
+import GymIndex from './components/gym_index';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -28,6 +29,9 @@ ReactDOM.render(
         <Switch>
           <Route path="/customer-login" component={CustomerLogin}/>
           <Route path="/gym-owner-login" component={GymOwnerLogin}/>
+          <Route path="/gym-index" component={GymIndex}/>
+
+
           <Route path="/terms-and-conditions" component={TermsCondition}/>
           <Route path="/privacy-policy" component={PrivacyPolicy}/>
           <Route path="/frequently-asked-questions" component={FAQ}/>

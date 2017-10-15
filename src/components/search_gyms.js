@@ -7,7 +7,7 @@ import { searchGym } from '../actions';
 class SearchGyms extends Component {
     onSubmit(values){        
         this.props.searchGym(values, () => {
-            this.props.history.push('/');
+            this.props.history.push('/gym-index');
         });
     }
 
